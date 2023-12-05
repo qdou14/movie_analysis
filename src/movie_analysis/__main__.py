@@ -60,11 +60,9 @@ def part3_and_part4():
     df_processed = api_client.add_pass_test_column(df_processed)
 
     # Plot and display figures
-    fig_bechdel_score = api_client.plot_bechdel_score(df_processed)
-    plt.show(fig_bechdel_score)
-
-    fig_pass_test = api_client.plot_pass_test(df_processed)
-    plt.show(fig_pass_test)
+    api_client.plot_bechdel_score(df_processed)
+    api_client.plot_pass_test(df_processed)
+    plt.show() 
 
 
 if __name__ == "__main__":
