@@ -54,7 +54,7 @@ def part3_and_part4():
     scraper.plot_average_score_by_year(df_processed)
 
     # Assuming the APIClient class has the following methods for analysis
-    api_client = APIClient()
+    api_client = APIClient(base_url="http://bechdeltest.com/api/v1")
     df_all_movies = api_client.get_all_movies()
     df_processed = api_client.process_movies(df_all_movies)
     df_processed = api_client.add_pass_test_column(df_processed)
