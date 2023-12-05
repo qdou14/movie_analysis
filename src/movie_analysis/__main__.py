@@ -30,7 +30,7 @@ def part1():
 
 def part2():
     """Fetch movie data from an API."""
-    api_client = APIClient()
+    api_client = APIClient(base_url="http://bechdeltest.com/api/v1")
     df_all_movies = api_client.get_all_movies()
     print(df_all_movies.head())
 
